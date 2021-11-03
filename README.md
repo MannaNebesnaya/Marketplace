@@ -10,7 +10,7 @@
 Can be found in [RELEASE_NOTES](RELEASE_NOTES.md).
 
 ## Authors
-* Alexsey Shevchenko - [MannaNebesnaya](https://github.com/MannaNebesnaya)
+* Alexey Shevchenko - [MannaNebesnaya](https://github.com/MannaNebesnaya)
 
 ## Acknowledgments
 ...
