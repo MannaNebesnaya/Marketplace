@@ -1,6 +1,11 @@
-.idea/*
+.idea
 build/*
+out
 *.iml
 out/*
 .gradle/*
-target/*
+target
+log
+*.patch
+/doc/
+
