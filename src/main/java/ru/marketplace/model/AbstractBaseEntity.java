@@ -2,13 +2,14 @@ package ru.marketplace.model;
 
 
 import org.hibernate.Hibernate;
+import ru.marketplace.repository.HasId;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @MappedSuperclass
 @Access(AccessType.FIELD)
-public abstract class AbstractBaseEntity {
+public abstract class AbstractBaseEntity implements HasId {
     public static final int START_SEQ = 100001;
 
 

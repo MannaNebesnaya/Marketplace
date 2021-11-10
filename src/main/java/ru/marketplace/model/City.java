@@ -11,8 +11,31 @@ import javax.persistence.*;
 public class City extends AbstractNamedEntity {
 
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     private Region region;
+
+
+    public City() {
+    }
+
+    public City(Integer id, String name) {
+        super(id, name);
+    }
+
+    public Region getRegion() {
+        return region;
+    }
+
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

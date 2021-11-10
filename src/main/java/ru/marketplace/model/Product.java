@@ -35,12 +35,16 @@ public class Product extends AbstractNamedEntity{
     public Product() {
     }
 
-    public Product(String description, Integer price, Date registered, boolean enabled, RootCategory category) {
+    public Product(Integer id, String name, String description, Integer price) {
+        this(id, name, description, price, new Date(), false);
+    }
+
+    public Product(Integer id, String name, String description, Integer price, Date registered, boolean enabled) {
+        super(id, name);
         this.description = description;
         this.price = price;
         this.registered = registered;
         this.enabled = enabled;
-        this.category = category;
     }
 
     public String getDescription() {
@@ -100,8 +104,6 @@ public class Product extends AbstractNamedEntity{
                 ", price=" + price +
                 ", registered=" + registered +
                 ", enabled=" + enabled +
-                ", category=" + category +
-                ", user=" + user +
                 '}';
     }
 }

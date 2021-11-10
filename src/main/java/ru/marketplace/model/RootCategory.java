@@ -14,8 +14,11 @@ public class RootCategory extends AbstractNamedEntity{
     private List<Product> products;
 
 
-
     public RootCategory() {
+    }
+
+    public RootCategory(Integer id, String name) {
+        super(id, name);
     }
 
     public List<Product> getProducts() {
@@ -27,7 +30,6 @@ public class RootCategory extends AbstractNamedEntity{
         return "RootCategory{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", products=" + products +
                 '}';
     }
 }

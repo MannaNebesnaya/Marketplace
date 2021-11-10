@@ -1,7 +1,12 @@
 package ru.marketplace.model;
 
 import javax.persistence.Column;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
 
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class AbstractNamedEntity extends AbstractBaseEntity{
 
     @Column(name = "name", nullable = false)

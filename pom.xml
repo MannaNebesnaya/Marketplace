@@ -4,7 +4,7 @@
 
     <groupId>com.github.mannanebesnaya</groupId>
     <artifactId>marketplace</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>Marketplace</name>
@@ -27,6 +27,10 @@
 
         <!--DB-->
         <postgresql.version>42.2.8</postgresql.version>
+
+        <!--    Tests  -->
+        <junit.jupiter.version>5.5.2</junit.jupiter.version>
+        <hamcrest.version>1.3</hamcrest.version>
 
         <!-- Hibernate -->
         <hibernate.version>5.4.7.Final</hibernate.version>
@@ -165,6 +169,34 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!--Test-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.13.2</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
