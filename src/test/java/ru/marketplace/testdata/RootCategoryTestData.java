@@ -6,7 +6,8 @@ import ru.marketplace.model.RootCategory;
 
 import java.util.List;
 
-import static ru.marketplace.model.AbstractBaseEntity.START_SEQ;
+import static ru.marketplace.service.AbstractServiceTest.START_SEQ;
+
 
 public class RootCategoryTestData {
     public static final int ROOT_CATEGORY_ID = START_SEQ;

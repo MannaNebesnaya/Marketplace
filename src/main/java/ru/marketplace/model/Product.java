@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.Date;
 @Entity
 @Table(name = "products")
-public class Product extends AbstractNamedEntity{
+public class Product extends AbstractBaseEntity {
 
     @Column(name = "description", nullable = false)
     private String description;

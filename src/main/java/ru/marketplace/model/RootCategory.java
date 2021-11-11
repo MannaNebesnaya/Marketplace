@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "root_categories")
-public class RootCategory extends AbstractNamedEntity{
+public class RootCategory extends AbstractBaseEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     private List<Product> products;
