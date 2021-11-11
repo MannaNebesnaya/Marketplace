@@ -10,7 +10,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "regions")
-public class Region extends AbstractNamedEntity {
+public class Region extends AbstractBaseEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "region")
     private List<City> cities;

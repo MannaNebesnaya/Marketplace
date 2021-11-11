@@ -1,6 +1,5 @@
 package ru.marketplace.repository.user;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.marketplace.model.User;
 import ru.marketplace.repository.UserRepository;
@@ -28,7 +27,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public boolean delete(int id) {
-        return false;
+        return crudUserRepository.delete(id) != 0;
     }
 
     @Override
@@ -50,6 +49,5 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> getAll() {
         return crudUserRepository.getAll();
     }
-
 
 }

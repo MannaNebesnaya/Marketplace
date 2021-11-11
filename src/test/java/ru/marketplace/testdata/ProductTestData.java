@@ -5,7 +5,8 @@ import ru.marketplace.model.Product;
 
 import java.util.List;
 
-import static ru.marketplace.model.AbstractBaseEntity.START_SEQ;
+import static ru.marketplace.service.AbstractServiceTest.START_SEQ;
+
 
 public class ProductTestData {
 

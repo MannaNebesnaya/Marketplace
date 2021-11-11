@@ -8,7 +8,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "email", name = "users_unique_email_idx")})
-public class User extends AbstractNamedEntity {
+public class User extends AbstractBaseEntity {
 
     @Column(name = "surname")
     private String surname;

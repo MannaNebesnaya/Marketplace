@@ -34,6 +34,13 @@ class UserServiceTest extends AbstractServiceTest {
     }
 
     @Test
+    void delete() {
+        service.delete(SELLER_ID);
+        assertThrows(NotFoundException.class, () ->
+                service.get(SELLER_ID));
+    }
+
+    @Test
     void get() {
         User user = service.get(ADMIN_ID);
         USER_MATCHERS.assertMatch(user, ADMIN1);

@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "cities")
-public class City extends AbstractNamedEntity {
+public class City extends AbstractBaseEntity {
 
 
     @ManyToOne(fetch = FetchType.LAZY)

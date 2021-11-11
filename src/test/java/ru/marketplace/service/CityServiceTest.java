@@ -1,11 +1,11 @@
 package ru.marketplace.service;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import ru.marketplace.model.City;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static ru.marketplace.testdata.CityTestData.getNew;
 

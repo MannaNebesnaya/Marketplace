@@ -12,6 +12,6 @@ import ru.marketplace.TimingExtension;
 })
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
 @ExtendWith(TimingExtension.class)
-abstract class AbstractServiceTest {
-
+public abstract class AbstractServiceTest {
+    public static final int START_SEQ = 100001;
 }
