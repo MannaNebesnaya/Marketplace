@@ -1,0 +1,85 @@
+* {
+    scrollbar-width: none;
+}
+
+.bg-white {
+    background-color: #f9f9f9 !important;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/*https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+    text-decoration: none;
+    color: #171515;
+}
+
+
+.jumbotron {
+    background-image: url("/resources/png/background/background1.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 10rem 0rem;
+    position: relative;
+    min-height: 78vh;
+    flex-direction: column-reverse;
+    background-color: #eeeeee;
+    background-position: center;
+    border-radius: 0rem;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 0rem !important;
+}
+
+/*.row#rowSearch {
+    display: block;
+}*/
+
+
+
+.category-change {
+    margin: 0 0 2.5%;
+}
+
+.category-change .right-side {
+    float: right;
+}
+
+.change-button {
+    position: relative;
+    float: left;
+    width: 152px;
+    height: 43px;
+    line-height: 43px;
+    margin: 4px 8px;
+    border-radius: 10px;
+    border: 1px solid #ae90c6;
+    font-size: 12px;
+    color: #57228f;
+    text-align: center;
+    cursor: pointer;
+}
+

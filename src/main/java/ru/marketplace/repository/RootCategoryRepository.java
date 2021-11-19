@@ -10,9 +10,9 @@ public interface RootCategoryRepository {
 
     RootCategory get(int id);
 
-    RootCategory getWithProducts(int id);
+    RootCategory getWithOffers(int id);
 
     List<RootCategory> getAll();
 
-    List<RootCategory> getAllWithProduct();
+    List<RootCategory> getAllWithOffer();
 }

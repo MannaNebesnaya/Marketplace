@@ -6,7 +6,7 @@ import ru.marketplace.model.RootCategory;
 
 import java.util.List;
 
-import static ru.marketplace.testdata.ProductTestData.*;
+import static ru.marketplace.testdata.OfferTestData.*;
 import static ru.marketplace.testdata.RootCategoryTestData.*;
 import static ru.marketplace.testdata.RootCategoryTestData.getNew;
 import static ru.marketplace.testdata.RootCategoryTestData.getUpdate;
@@ -40,10 +40,10 @@ class RootCategoryServiceTest extends AbstractServiceTest {
     }
 
     @Test
-    void getWithProducts() {
-        RootCategory category = service.getWithProducts(ROOT_CATEGORY_ID);
+    void getWithOffers() {
+        RootCategory category = service.getWithOffers(ROOT_CATEGORY_ID);
         ROOT_CATEGORY_MATCHERS.assertMatch(category, ROOT_CATEGORY1);
-        PRODUCT_MATCHERS.assertMatch(category.getProducts(), PRODUCT1, PRODUCT2, PRODUCT5, PRODUCT7);
+        OFFER_MATCHERS.assertMatch(category.getOffers(), OFFER_1, OFFER_2, OFFER_5, OFFER_7);
 
     }
 
@@ -54,8 +54,8 @@ class RootCategoryServiceTest extends AbstractServiceTest {
     }
 
     @Test
-    void getAllWithProducts() {
-        List<RootCategory> categories = service.getAllWithProducts();
+    void getAllWithOffers() {
+        List<RootCategory> categories = service.getAllWithOffers();
         ROOT_CATEGORY_MATCHERS.assertMatch(categories, ROOT_CATEGORIES);
     }
 }

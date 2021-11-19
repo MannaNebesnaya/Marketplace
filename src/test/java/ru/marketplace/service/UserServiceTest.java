@@ -2,14 +2,13 @@ package ru.marketplace.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.marketplace.model.Product;
 import ru.marketplace.model.User;
 import ru.marketplace.util.exception.NotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.marketplace.testdata.CityTestData.CITY_ID;
-import static ru.marketplace.testdata.ProductTestData.PRODUCTS_SELLER;
-import static ru.marketplace.testdata.ProductTestData.PRODUCT_MATCHERS;
+import static ru.marketplace.testdata.OfferTestData.OFFERS_SELLER;
+import static ru.marketplace.testdata.OfferTestData.OFFER_MATCHERS;
 import static ru.marketplace.testdata.UserTestData.*;
 
 class UserServiceTest extends AbstractServiceTest {
@@ -53,10 +52,10 @@ class UserServiceTest extends AbstractServiceTest {
     }
 
     @Test
-    void getWithProduct() {
-        User user = service.getWithProduct(SELLER_ID);
+    void getWithOffer() {
+        User user = service.getWithOffer(SELLER_ID);
         USER_MATCHERS.assertMatch(user, SELLER1);
-        PRODUCT_MATCHERS.assertMatch(user.getProducts(), PRODUCTS_SELLER);
+        OFFER_MATCHERS.assertMatch(user.getOffers(), OFFERS_SELLER);
     }
 
     @Test

@@ -6,7 +6,6 @@ import ru.marketplace.model.RootCategory;
 import ru.marketplace.repository.RootCategoryRepository;
 
 import java.util.List;
-import java.util.Set;
 
 @Repository
 public class RootCategoryRepositoryImpl implements RootCategoryRepository {
@@ -29,8 +28,8 @@ public class RootCategoryRepositoryImpl implements RootCategoryRepository {
     }
 
     @Override
-    public RootCategory getWithProducts(int id) {
-        return crudRootCategoryRepository.getWithProducts(id);
+    public RootCategory getWithOffers(int id) {
+        return crudRootCategoryRepository.getWithOffers(id);
     }
 
     @Override
@@ -39,7 +38,7 @@ public class RootCategoryRepositoryImpl implements RootCategoryRepository {
     }
 
     @Override
-    public List<RootCategory> getAllWithProduct() {
-        return crudRootCategoryRepository.getAllWithProducts();
+    public List<RootCategory> getAllWithOffer() {
+        return crudRootCategoryRepository.getAllWithOffers();
     }
 }

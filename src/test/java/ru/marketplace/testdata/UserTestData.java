@@ -34,5 +34,5 @@ public class UserTestData {
         return new User(ADMIN_ID, "Обновлённое имя", "Обновлённая фамилия", "update@mail.ru", "update223", "+79084325689", Role.ROLE_BUYER, Role.ROLE_SELLER);
     }
 
-    public static final TestMatchers<User> USER_MATCHERS = TestMatchers.useFieldsComparator(User.class, "registered", "products", "cityAccommodation");
+    public static final TestMatchers<User> USER_MATCHERS = TestMatchers.useFieldsComparator(User.class, "registered", "offers", "cityAccommodation");
 }

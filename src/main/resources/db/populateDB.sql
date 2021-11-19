@@ -1,5 +1,5 @@
 DELETE
-FROM products;
+FROM offers;
 DELETE
 FROM user_roles;
 DELETE
@@ -13,9 +13,9 @@ FROM root_categories;
 ALTER SEQUENCE global_seq RESTART WITH 100001;
 
 INSERT INTO root_categories (name)
-VALUES ('buy_sell'), /*100001*/
+VALUES ('goods'), /*100001*/
        ('services'), /*100002*/
-       ('real_estate'); /*100003*/
+       ('realty'); /*100003*/
 
 INSERT INTO regions(name)
 VALUES ('Челябинская область'), /*100004*/
@@ -46,7 +46,7 @@ VALUES ('ROLE_ADMIN', 100010),
 
 
 
-INSERT INTO products (name, description, price, root_category_id, user_id)
+INSERT INTO offers (name, description, price, root_category_id, user_id)
 VALUES ('laptop', 'Super laptop from Apple', 10000, 100001, 100010),                        /*100014*/
        ('Картофелечистка', 'Лучшая на планете картофелечистка', 500, 100001, 100013),        /*100015*/
        ('Репетитор русского языка', 'Подготовлю за неделю к ЕГЭ', 700, 100002, 100013),      /*100016*/

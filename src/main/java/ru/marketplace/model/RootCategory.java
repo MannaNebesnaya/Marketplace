@@ -11,7 +11,7 @@ import java.util.List;
 public class RootCategory extends AbstractBaseEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
-    private List<Product> products;
+    private List<Offer> offers;
 
 
     public RootCategory() {
@@ -21,8 +21,8 @@ public class RootCategory extends AbstractBaseEntity {
         super(id, name);
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<Offer> getOffers() {
+        return offers;
     }
 
     @Override
