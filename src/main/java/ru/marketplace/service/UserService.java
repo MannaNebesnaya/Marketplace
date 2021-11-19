@@ -42,7 +42,7 @@ public class UserService {
         return repository.getAll();
     }
 
-    public User getWithProduct(int id){
-        return repository.getWithProduct(id);
+    public User getWithOffer(int id){
+        return repository.getWithOffer(id);
     }
 }

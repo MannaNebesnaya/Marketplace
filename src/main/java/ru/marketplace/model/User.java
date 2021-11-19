@@ -43,7 +43,7 @@ public class User extends AbstractBaseEntity {
 
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    private List<Product> products;
+    private List<Offer> offers;
 
 
     public User() {
@@ -131,8 +131,8 @@ public class User extends AbstractBaseEntity {
         this.cityAccommodation = cityAccommodation;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<Offer> getOffers() {
+        return offers;
     }
 
     @Override

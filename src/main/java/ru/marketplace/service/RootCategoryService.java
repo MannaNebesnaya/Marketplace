@@ -7,7 +7,6 @@ import ru.marketplace.model.RootCategory;
 import ru.marketplace.repository.RootCategoryRepository;
 
 import java.util.List;
-import java.util.Set;
 
 import static ru.marketplace.util.ValidationUtil.checkNotFoundWithId;
 
@@ -36,15 +35,15 @@ public class RootCategoryService {
         return checkNotFoundWithId(repository.get(id), id);
     }
 
-    public RootCategory getWithProducts(int id) {
-        return checkNotFoundWithId(repository.getWithProducts(id), id);
+    public RootCategory getWithOffers(int id) {
+        return checkNotFoundWithId(repository.getWithOffers(id), id);
     }
 
     public List<RootCategory> getAll() {
         return repository.getAll();
     }
 
-    public List<RootCategory> getAllWithProducts() {
-        return repository.getAllWithProduct();
+    public List<RootCategory> getAllWithOffers() {
+        return repository.getAllWithOffer();
     }
 }

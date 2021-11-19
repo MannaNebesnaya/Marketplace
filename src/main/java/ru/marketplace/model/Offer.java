@@ -6,8 +6,8 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.util.Date;
 @Entity
-@Table(name = "products")
-public class Product extends AbstractBaseEntity {
+@Table(name = "offers")
+public class Offer extends AbstractBaseEntity {
 
     @Column(name = "description", nullable = false)
     private String description;
@@ -22,7 +22,7 @@ public class Product extends AbstractBaseEntity {
     private boolean enabled = false;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "root_category_id", nullable = false)
     private RootCategory category;
 
@@ -32,14 +32,14 @@ public class Product extends AbstractBaseEntity {
     private User user;
 
 
-    public Product() {
+    public Offer() {
     }
 
-    public Product(Integer id, String name, String description, Integer price) {
+    public Offer(Integer id, String name, String description, Integer price) {
         this(id, name, description, price, new Date(), false);
     }
 
-    public Product(Integer id, String name, String description, Integer price, Date registered, boolean enabled) {
+    public Offer(Integer id, String name, String description, Integer price, Date registered, boolean enabled) {
         super(id, name);
         this.description = description;
         this.price = price;
@@ -97,7 +97,7 @@ public class Product extends AbstractBaseEntity {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Offer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +

@@ -16,5 +16,5 @@ public interface UserRepository {
 
     User getByEmail(String email);
 
-    User getWithProduct(int id);
+    User getWithOffer(int id);
 }

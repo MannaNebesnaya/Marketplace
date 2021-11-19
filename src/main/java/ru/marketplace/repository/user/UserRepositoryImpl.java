@@ -36,8 +36,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User getWithProduct(int id) {
-        return crudUserRepository.getWithProducts(id);
+    public User getWithOffer(int id) {
+        return crudUserRepository.getWithOffers(id);
     }
 
     @Override

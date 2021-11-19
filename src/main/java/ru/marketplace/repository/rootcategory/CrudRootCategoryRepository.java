@@ -20,12 +20,12 @@ public interface CrudRootCategoryRepository extends JpaRepository<RootCategory, 
     RootCategory save(RootCategory rootCategory);
 
 
-//    @EntityGraph(attributePaths = {"products"}, type = EntityGraph.EntityGraphType.LOAD)
+//    @EntityGraph(attributePaths = {"offers"}, type = EntityGraph.EntityGraphType.LOAD)
 //    @Query("SELECT r FROM Region r WHERE r.id=:id")
-    @Query("SELECT r FROM RootCategory r LEFT JOIN FETCH r.products WHERE r.id=:id")
-    RootCategory getWithProducts(@Param("id") int id);
+    @Query("SELECT r FROM RootCategory r LEFT JOIN FETCH r.offers WHERE r.id=:id")
+    RootCategory getWithOffers(@Param("id") int id);
 
 
-    @Query("SELECT DISTINCT r FROM RootCategory r JOIN FETCH r.products ORDER BY r.id")
-    List<RootCategory> getAllWithProducts();
+    @Query("SELECT DISTINCT r FROM RootCategory r JOIN FETCH r.offers ORDER BY r.id")
+    List<RootCategory> getAllWithOffers();
 }
